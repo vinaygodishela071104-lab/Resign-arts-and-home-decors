@@ -1,31 +1,32 @@
 const menuBtn = document.querySelector(".menu-btn");
 const navbar = document.querySelector(".navbar");
 
-const homeMenu = document.querySelector(".home-menu");
+const homeLink = document.querySelector(".home-menu > a");
 const dropdown = document.querySelector(".dropdown");
 
 /* MOBILE NAVBAR */
 
-menuBtn.onclick = () => {
+menuBtn.addEventListener("click", () => {
   navbar.classList.toggle("active");
-};
+});
 
-/* HOME DROPDOWN */
+/* MOBILE DROPDOWN */
 
-homeMenu.onclick = (e) => {
+homeLink.addEventListener("click", (e) => {
   if (window.innerWidth <= 1024) {
     e.preventDefault();
 
     dropdown.classList.toggle("show-dropdown");
   }
-};
+});
+
+/* DARK MODE */
 
 const darkBtn = document.querySelector(".dark-mode-btn");
 
 darkBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 
-  // Save mode
   if (document.body.classList.contains("dark-mode")) {
     localStorage.setItem("theme", "dark");
   } else {
@@ -33,7 +34,8 @@ darkBtn.addEventListener("click", () => {
   }
 });
 
-// Load saved mode
+/* LOAD THEME */
+
 window.addEventListener("load", () => {
   const savedTheme = localStorage.getItem("theme");
 
@@ -42,9 +44,7 @@ window.addEventListener("load", () => {
   }
 });
 
-/* =========================
-   RTL MODE TOGGLE
-========================= */
+/* RTL MODE */
 
 const rtlBtn = document.querySelector(".rtl-btn");
 
@@ -58,13 +58,12 @@ rtlBtn.addEventListener("click", () => {
   }
 });
 
-// Load saved direction
+/* LOAD RTL */
+
 window.addEventListener("load", () => {
   const savedDirection = localStorage.getItem("direction");
 
   if (savedDirection === "rtl") {
     document.documentElement.setAttribute("dir", "rtl");
-  } else {
-    document.documentElement.setAttribute("dir", "ltr");
   }
 });

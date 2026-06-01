@@ -69,7 +69,11 @@ body.dark-mode .header {
   align-items: center;
   gap: 38px;
 }
-
+.home-menu a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 .navbar li {
   list-style: none;
   position: relative;
@@ -979,7 +983,23 @@ body.dark-mode .product-line p {
   .main-btn {
     display: none;
   }
+  .menu-btn {
+    display: flex;
 
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(198, 161, 110, 0.25);
+
+    background: transparent;
+
+    color: var(--primary);
+
+    font-size: 1rem;
+  }
   .navbar {
     position: absolute;
 
@@ -1099,24 +1119,6 @@ body.dark-mode .product-line p {
 
   .main-btn {
     display: none;
-  }
-
-  .menu-btn {
-    display: flex;
-
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(198, 161, 110, 0.25);
-
-    background: transparent;
-
-    color: var(--primary);
-
-    font-size: 1rem;
   }
 
   .logo {
@@ -1263,23 +1265,7 @@ body.dark-mode .product-line p {
   section {
     padding: 90px 50px;
   }
-  .menu-btn {
-    display: flex;
 
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(198, 161, 110, 0.25);
-
-    background: transparent;
-
-    color: var(--primary);
-
-    font-size: 1rem;
-  }
   .header {
     padding: 18px 50px;
   }
@@ -1359,23 +1345,6 @@ body.dark-mode .product-line p {
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
   section {
     padding: 100px 70px;
-  }
-  .menu-btn {
-    display: flex;
-
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(198, 161, 110, 0.25);
-
-    background: transparent;
-
-    color: var(--primary);
-
-    font-size: 1rem;
   }
 
   .header {
