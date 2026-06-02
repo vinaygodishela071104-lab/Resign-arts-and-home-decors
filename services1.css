@@ -247,6 +247,7 @@ section {
   position: relative;
   display: flex;
   align-items: center;
+  background-image: url(images/gh2.webp);
 }
 
 .detail-overlay {
