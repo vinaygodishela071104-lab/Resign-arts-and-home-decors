@@ -1,0 +1,402 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--primary:#c6a16e;
+--secondary:#8b6b4a;
+}
+
+body{
+font-family:"Poppins",sans-serif;
+min-height:100vh;
+position: relative;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:#f6f1ea;
+
+padding:20px;
+}
+
+
+.top-actions {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  gap: 12px;
+}
+
+.top-actions button {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #141414;
+  color: var(--primary);
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.4s;
+}
+
+.top-actions button:hover {
+  transform: translateY(-4px);
+}
+
+/* CARD */
+
+.forgot-card{
+width:100%;
+max-width:450px;
+
+background:rgba(0,0,0,.12);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.4);
+
+border-radius:28px;
+
+padding:40px 35px;
+
+text-align:center;
+
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+/* LOGO */
+
+.logo{
+font-size:36px;
+font-family:"Cormorant Garamond",serif;
+font-weight:700;
+color: #ffffff;
+margin-bottom:20px;
+}
+
+.logo a{
+text-decoration:none;
+color:#c6a16e;
+}
+
+.logo span{
+color:white;
+}
+
+/* ICON */
+
+.icon{
+width:90px;
+height:90px;
+
+margin:0 auto 20px;
+
+border-radius:50%;
+
+background:rgba(198,161,110,.15);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:34px;
+
+color:var(--primary);
+}
+
+/* CONTENT */
+
+h1{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.description{
+font-size:14px;
+line-height:1.8;
+color:#555;
+
+margin-bottom:25px;
+}
+
+/* INPUT */
+
+.input-group{
+margin-bottom:20px;
+}
+
+.input-group input{
+width:100%;
+height:52px;
+
+border:none;
+outline:none;
+
+padding:0 18px;
+
+border-radius:14px;
+
+background:#fff;
+
+border:1px solid rgba(0,0,0,.08);
+
+font-size:14px;
+}
+
+.input-group input:focus{
+border-color:var(--primary);
+}
+
+/* BUTTON */
+
+.reset-btn{
+width:100%;
+height:52px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+color:#141414;
+
+font-weight:600;
+font-size:14px;
+
+cursor:pointer;
+
+transition:.4s;
+}
+
+.reset-btn:hover{
+transform:translateY(-4px);
+}
+
+/* FOOTER */
+
+.back-login{
+margin-top:22px;
+font-size:14px;
+}
+
+.back-login a{
+text-decoration:none;
+color:var(--primary);
+font-weight:600;
+}
+
+.dark-mode-btn{
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:50%;
+  background:#141414;
+  color:#c6a16e;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.dark-mode-btn:hover{
+  transform:translateY(-4px);
+}
+
+/* DARK MODE */
+
+body.dark-mode{
+  background:#141414;
+}
+
+body.dark-mode .forgot-card{
+  background:rgba(20,20,20,.92);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:none;
+}
+
+body.dark-mode h1{
+  color:#f6f1ea;
+}
+
+body.dark-mode .description{
+  color:#bcbcbc;
+}
+
+body.dark-mode .logo{
+  color:#f6f1ea;
+}
+
+body.dark-mode .logo span{
+  color:var(--primary);
+}
+
+body.dark-mode .input-group input{
+  background:#1f1f1f;
+  color:#fff;
+  border:1px solid #333;
+}
+
+body.dark-mode .input-group input::placeholder{
+  color:#888;
+}
+
+body.dark-mode .back-login{
+  color:#bcbcbc;
+}
+
+body.dark-mode .dark-mode-btn{
+  background:#f6f1ea;
+  color:#141414;
+}
+/* ======================
+SAMSUNG GALAXY S8+
+====================== */
+@media screen and (max-width:480px){
+
+  body{
+    padding:15px;
+    overflow-y:auto;
+  }
+
+  .forgot-card{
+    max-width:100%;
+    padding:30px 20px;
+  }
+
+  .top-actions{
+    top:12px;
+    right:12px;
+    gap:8px;
+  }
+
+  .top-actions button{
+    width:40px;
+    height:40px;
+    font-size:14px;
+  }
+
+  .logo{
+    font-size:30px;
+  }
+
+  .icon{
+    width:75px;
+    height:75px;
+    font-size:28px;
+  }
+
+  h1{
+    font-size:24px;
+  }
+
+  .description{
+    font-size:13px;
+    line-height:1.6;
+  }
+
+  .input-group input{
+    height:48px;
+    font-size:13px;
+  }
+
+  .reset-btn{
+    height:48px;
+    font-size:13px;
+  }
+
+  .back-login{
+    font-size:13px;
+  }
+}
+
+/* ======================
+IPAD MINI
+====================== */
+@media screen and (min-width:481px) and (max-width:768px){
+
+  .forgot-card{
+    max-width:500px;
+    padding:35px 30px;
+  }
+
+  .logo{
+    font-size:34px;
+  }
+
+  .icon{
+    width:85px;
+    height:85px;
+    font-size:32px;
+  }
+
+  h1{
+    font-size:28px;
+  }
+
+  .description{
+    font-size:14px;
+  }
+}
+
+/* ======================
+IPAD PRO 11"
+====================== */
+@media screen and (min-width:769px) and (max-width:1024px){
+
+  .forgot-card{
+    max-width:520px;
+    padding:40px;
+  }
+
+  .logo{
+    font-size:36px;
+  }
+
+  h1{
+    font-size:30px;
+  }
+
+  .top-actions{
+    top:20px;
+    right:20px;
+  }
+}
+
+/* ======================
+IPAD PRO 12.9"
+====================== */
+@media screen and (min-width:1025px) and (max-width:1366px){
+
+  .forgot-card{
+    max-width:550px;
+  }
+
+  .logo{
+    font-size:38px;
+  }
+
+  .icon{
+    width:95px;
+    height:95px;
+    font-size:36px;
+  }
+
+  h1{
+    font-size:32px;
+  }
+}

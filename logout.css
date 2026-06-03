@@ -1,0 +1,318 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+:root{
+--primary:#c6a16e;
+--secondary:#8b6b4a;
+}
+
+
+
+
+
+
+.logout-container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+}
+
+.logout-card{
+width:500px;
+background:rgba(0,0,0,.08);
+backdrop-filter:blur(55px);
+padding:50px;
+border-radius:25px;
+text-align:center;
+align-items: center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.actions{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+.logo{
+font-size:32px;
+font-weight:700;
+margin-bottom:25px;
+}
+
+.logo a{
+text-decoration:none;
+color:#fff;
+}
+
+.logo span{
+color:var(--primary);
+}
+
+
+.dark-mode-btn,
+.rtl-btn{
+width:48px;
+height:48px;
+border-radius:50%;
+border:none;
+cursor:pointer;
+background:#c6a16e;
+font-weight:600;
+}
+
+.notification{
+width:50px;
+height:50px;
+background:#c6a16e;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+cursor:pointer;
+}
+.logout-icon{
+width:100px;
+height:100px;
+margin:0 auto 25px;
+border-radius:50%;
+background:rgba(198,161,110,.15);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:42px;
+}
+
+.logout-card h1{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.logout-card p{
+line-height:1.8;
+color:#666;
+margin-bottom:30px;
+}
+
+.logout-actions{
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.cancel-btn{
+padding:14px 24px;
+border:none;
+background:#ececec;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+.logout-confirm-btn{
+padding:14px 24px;
+border:none;
+background:#c6a16e;
+color:#fff;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+transition:.3s;
+}
+
+.logout-confirm-btn:hover{
+background:#c6a16e;
+}
+/* ======================
+LOGOUT PAGE DARK MODE
+====================== */
+
+body.dark-mode{
+background:#121212;
+color:#fff;
+}
+
+/* TOPBAR ELEMENTS */
+
+body.dark-mode .search-box input,
+body.dark-mode .profile,
+body.dark-mode .notification,
+body.dark-mode .dark-mode-btn,
+body.dark-mode .rtl-btn{
+background:#000;
+color:#fff;
+border:1px solid #222;
+}
+
+body.dark-mode .search-box input::placeholder{
+color:#999;
+}
+
+/* LOGOUT CARD */
+
+body.dark-mode .logout-card{
+background:#000;
+color:#fff;
+border:1px solid #222;
+box-shadow:none;
+}
+
+body.dark-mode .logout-card h1{
+color:#fff;
+}
+
+body.dark-mode .logout-card p{
+color:#cfcfcf;
+}
+
+/* LOGOUT ICON */
+
+body.dark-mode .logout-icon{
+background:rgba(198,161,110,.15);
+color:#fff;
+}
+
+/* SESSION INFO */
+
+body.dark-mode .info-box{
+background:#111;
+color:#fff;
+border:1px solid #222;
+}
+
+body.dark-mode .info-box h3{
+color:#fff;
+}
+
+body.dark-mode .info-box p{
+color:#cfcfcf;
+}
+
+/* BUTTONS */
+
+body.dark-mode .cancel-btn{
+background:#111;
+color:#fff;
+border:1px solid #222;
+}
+
+body.dark-mode .cancel-btn:hover{
+background:#1b1b1b;
+}
+
+body.dark-mode .logout-confirm-btn{
+background:#c0392b;
+color:#fff;
+}
+
+body.dark-mode .logout-confirm-btn:hover{
+background:#a93226;
+}
+/* =====================================
+SAMSUNG GALAXY S8+ (360px - 480px)
+===================================== */
+@media screen and (max-width:480px){
+
+  .logout-container{
+    padding:20px;
+  }
+
+  .logout-card{
+    width:100%;
+    padding:30px 20px;
+  }
+
+  .logout-icon{
+    width:80px;
+    height:80px;
+    font-size:32px;
+  }
+
+  .logout-card h1{
+    font-size:28px;
+  }
+
+  .logout-card p{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .logout-actions{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .cancel-btn,
+  .logout-confirm-btn{
+    width:100%;
+  }
+
+  .logo{
+    font-size:26px;
+  }
+
+  .dark-mode-btn,
+  .rtl-btn,
+  .notification{
+    width:42px;
+    height:42px;
+  }
+}
+
+/* =====================================
+IPAD MINI (481px - 768px)
+===================================== */
+@media screen and (min-width:481px) and (max-width:768px){
+
+  .logout-container{
+    padding:25px;
+  }
+
+  .logout-card{
+    width:90%;
+    max-width:550px;
+    padding:40px;
+  }
+
+  .logout-card h1{
+    font-size:32px;
+  }
+
+  .logout-actions{
+    justify-content:center;
+  }
+}
+
+/* =====================================
+IPAD PRO 11" (769px - 1024px)
+===================================== */
+@media screen and (min-width:769px) and (max-width:1024px){
+
+  .logout-card{
+    width:600px;
+    max-width:90%;
+  }
+
+  .logout-card h1{
+    font-size:34px;
+  }
+}
+
+/* =====================================
+IPAD PRO 12.9" (1025px - 1366px)
+===================================== */
+@media screen and (min-width:1025px) and (max-width:1366px){
+
+  .logout-card{
+    width:650px;
+    max-width:90%;
+  }
+}

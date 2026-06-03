@@ -62,7 +62,7 @@ body {
   width: 100%;
   max-width: 390px;
 
-  background: rgba(15, 15, 15, 0.45);
+  background: rgba(0, 0,0, 0.15);
 
 
 
@@ -358,4 +358,129 @@ body.dark-mode .social-btn {
 
 body.dark-mode .divider span {
   background: #141414;
+}
+/* ======================
+SAMSUNG GALAXY S8+
+====================== */
+@media screen and (max-width: 480px) {
+
+  body{
+    padding:15px;
+    overflow-y:auto;
+  }
+
+  .login-card{
+    max-width:100%;
+    padding:25px 20px;
+  }
+
+  .logo{
+    font-size:26px;
+    margin-bottom:20px;
+  }
+
+  .logo h1{
+    font-size:32px;
+  }
+
+  .logo p{
+    font-size:12px;
+  }
+
+  .top-actions{
+    top:12px;
+    right:12px;
+    gap:8px;
+  }
+
+  .top-actions button{
+    width:40px;
+    height:40px;
+    font-size:14px;
+  }
+
+  .form-group input{
+    height:46px;
+    font-size:13px;
+  }
+
+  .form-options{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .forgot{
+    font-size:12px;
+  }
+
+  .login-btn{
+    height:46px;
+  }
+
+  .social-btn{
+    height:44px;
+    font-size:13px;
+  }
+
+  .signup-text{
+    font-size:12px;
+  }
+}
+
+/* ======================
+IPAD MINI
+====================== */
+@media screen and (min-width:481px) and (max-width:768px){
+
+  .login-card{
+    max-width:500px;
+    padding:30px;
+  }
+
+  .logo h1{
+    font-size:38px;
+  }
+
+  .top-actions button{
+    width:42px;
+    height:42px;
+  }
+
+  .form-group input{
+    height:48px;
+  }
+}
+
+/* ======================
+IPAD PRO 11"
+====================== */
+@media screen and (min-width:769px) and (max-width:1024px){
+
+  .login-card{
+    max-width:480px;
+  }
+
+  .logo h1{
+    font-size:40px;
+  }
+
+  .top-actions{
+    top:20px;
+    right:20px;
+  }
+}
+
+/* ======================
+IPAD PRO 12.9"
+====================== */
+@media screen and (min-width:1025px) and (max-width:1366px){
+
+  .login-card{
+    max-width:500px;
+  }
+
+  .logo h1{
+    font-size:42px;
+  }
 }

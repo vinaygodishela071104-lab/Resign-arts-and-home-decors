@@ -1,0 +1,592 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+:root{
+--primary:#c6a16e;
+--secondary:#8b6b4a;
+}
+
+body{
+background:#f8f5f1;
+display:flex;
+height:100vh;
+overflow:hidden;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:260px;
+background:#111;
+padding:25px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+color:#fff;
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+margin-bottom:25px;
+}
+
+.logo a{
+text-decoration:none;
+color:#fff;
+}
+
+.logo span{
+color:var(--primary);
+}
+
+.sidebar-menu{
+list-style:none;
+}
+
+.sidebar-menu li{
+margin-bottom:10px;
+}
+
+.sidebar-menu a{
+display:flex;
+align-items:center;
+padding:14px 16px;
+border-radius:12px;
+text-decoration:none;
+color:#ddd;
+transition:.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active{
+background:var(--primary);
+color:#fff;
+}
+
+.logout-btn{
+background:#222;
+padding:14px;
+text-align:center;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+}
+.logout-btn a{
+display: flex;  
+align-items: center;
+text-decoration: none; 
+text-align: center;
+color: #f8f5f1; 
+gap: 8px;
+margin-left: 20px;}
+.logout-btn:hover{
+background:#c0392b;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+padding:25px;
+overflow-y:auto;
+}
+
+/* TOPBAR */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.search-box{
+width:380px;
+}
+
+.search-box input{
+width:100%;
+padding:14px 18px;
+border:none;
+border-radius:14px;
+outline:none;
+background:#fff;
+}
+
+.top-actions{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.dark-mode-btn,
+.rtl-btn{
+width:48px;
+height:48px;
+border-radius:50%;
+border:none;
+cursor:pointer;
+background:#fff;
+font-weight:600;
+}
+
+.notification{
+width:50px;
+height:50px;
+background:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+cursor:pointer;
+}
+
+.badge{
+position:absolute;
+top:8px;
+right:8px;
+width:10px;
+height:10px;
+background:red;
+border-radius:50%;
+}
+
+.profile{
+display:flex;
+align-items:center;
+gap:10px;
+background:#fff;
+padding:8px 15px;
+border-radius:50px;
+}
+
+.profile img{
+width:42px;
+height:42px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* WELCOME */
+
+.welcome{
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+padding:30px;
+border-radius:20px;
+color:#fff;
+margin-bottom:25px;
+}
+
+.welcome h1{
+font-size:32px;
+margin-bottom:8px;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-bottom:25px;
+}
+
+.stat-card{
+background:#fff;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.stat-card h4{
+font-size:14px;
+color:#777;
+margin-bottom:10px;
+}
+
+.stat-card h2{
+font-size:28px;
+margin-bottom:8px;
+color:#222;
+}
+
+.stat-card span{
+font-size:13px;
+color:#2e7d32;
+}
+
+/* ORDER TABLE */
+
+.orders-table{
+background:#fff;
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.orders-table h3{
+margin-bottom:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#f3f3f3;
+padding:15px;
+text-align:left;
+}
+
+td{
+padding:15px;
+border-bottom:1px solid #eee;
+}
+
+.status{
+padding:7px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+}
+
+.completed{
+background:#dff5e1;
+color:#2e7d32;
+}
+
+.processing{
+background:#fff4d6;
+color:#b7791f;
+}
+
+.cancelled{
+background:#ffe3e3;
+color:#dc2626;
+}
+
+/* SECTION GRID */
+
+.section-grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:20px;
+}
+
+/* SHIPPING */
+
+.shipping{
+background:#fff;
+padding:25px;
+border-radius:20px;
+}
+
+.shipping h3{
+margin-bottom:20px;
+}
+
+.ship-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:#f8f5f1;
+border-radius:12px;
+margin-bottom:12px;
+}
+
+.track-btn{
+padding:10px 18px;
+border:none;
+background:var(--primary);
+color:#fff;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* ANALYTICS */
+
+.analytics{
+background:#fff;
+padding:25px;
+border-radius:20px;
+}
+
+.analytics h3{
+margin-bottom:20px;
+}
+
+.chart{
+height:280px;
+display:flex;
+align-items:flex-end;
+gap:12px;
+}
+
+.bar{
+flex:1;
+background:linear-gradient(
+180deg,
+var(--primary),
+var(--secondary)
+);
+border-radius:10px 10px 0 0;
+}
+
+.bar:nth-child(1){height:120px;}
+.bar:nth-child(2){height:180px;}
+.bar:nth-child(3){height:140px;}
+.bar:nth-child(4){height:220px;}
+.bar:nth-child(5){height:170px;}
+.bar:nth-child(6){height:260px;}
+
+/* DARK MODE */
+
+body.dark-mode{
+background:#121212;
+color:#fff;
+}
+
+body.dark-mode .stat-card,
+body.dark-mode .orders-table,
+body.dark-mode .shipping,
+body.dark-mode .analytics,
+body.dark-mode .profile,
+body.dark-mode .notification,
+body.dark-mode .search-box input{
+background:#1f1f1f;
+color:#fff;
+}
+
+body.dark-mode .stat-card h2{
+color:#fff;
+}
+
+body.dark-mode th{
+background:#292929;
+}
+
+body.dark-mode td{
+border-color:#333;
+}
+
+body.dark-mode .ship-item{
+background:#2b2b2b;
+}
+.menu-toggle {
+  display: none;
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+/* =====================================
+SAMSUNG GALAXY S8+ (360px - 480px)
+===================================== */
+@media screen and (max-width: 480px) {
+
+  body{
+    overflow-x:hidden;
+  }
+
+  .sidebar{
+    position:fixed;
+    left:-260px;
+    top:0;
+    width:260px;
+    height:100vh;
+    z-index:999;
+    transition:.4s;
+  }
+
+  .sidebar.active{
+    left:0;
+  }
+
+  .main{
+    width:100%;
+    padding:15px;
+    min-width:0;
+  }
+
+  .topbar{
+    flex-direction:column;
+    align-items:stretch;
+    gap:15px;
+  }
+
+  .search-box{
+    width:100%;
+  }
+
+  .top-actions{
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .profile{
+    width:100%;
+    justify-content:center;
+  }
+
+  .welcome{
+    padding:20px;
+  }
+
+  .welcome h1{
+    font-size:24px;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .section-grid{
+    grid-template-columns:1fr;
+  }
+
+  .orders-table{
+    overflow-x:auto;
+  }
+
+  table{
+    min-width:700px;
+  }
+
+  .ship-item{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+  }
+
+  .chart{
+    height:220px;
+    gap:8px;
+  }
+
+  .logo{
+    font-size:26px;
+  }
+
+  .logout-btn a{
+    justify-content:center;
+    margin-left:0;
+  }
+
+  .dark-mode-btn,
+  .rtl-btn,
+  .notification{
+    width:42px;
+    height:42px;
+  }
+}
+
+/* =====================================
+IPAD MINI (481px - 768px)
+===================================== */
+@media screen and (min-width:481px) and (max-width:768px){
+
+  .sidebar{
+    width:220px;
+  }
+
+  .main{
+    padding:20px;
+  }
+
+  .search-box{
+    width:250px;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .section-grid{
+    grid-template-columns:1fr;
+  }
+
+  .orders-table{
+    overflow-x:auto;
+  }
+
+  table{
+    min-width:700px;
+  }
+
+  .profile span{
+    display:none;
+  }
+
+  .chart{
+    height:250px;
+  }
+}
+
+/* =====================================
+IPAD PRO 11" (769px - 1024px)
+===================================== */
+@media screen and (min-width:769px) and (max-width:1024px){
+
+  .sidebar{
+    width:230px;
+  }
+
+  .search-box{
+    width:300px;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .section-grid{
+    grid-template-columns:1fr;
+  }
+
+  .orders-table{
+    overflow-x:auto;
+  }
+
+  table{
+    min-width:750px;
+  }
+}
+
+/* =====================================
+IPAD PRO 12.9" (1025px - 1366px)
+===================================== */
+@media screen and (min-width:1025px) and (max-width:1366px){
+
+  .stats{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .section-grid{
+    grid-template-columns:1.5fr 1fr;
+  }
+
+  .search-box{
+    width:340px;
+  }
+}

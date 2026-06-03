@@ -1,0 +1,578 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+:root{
+--primary:#c6a16e;
+--secondary:#8b6b4a;
+}
+
+body{
+background:#f8f5f1;
+display:flex;
+height:100vh;
+overflow:hidden;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:260px;
+background:#111;
+padding:25px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+color:#fff;
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+margin-bottom:25px;
+}
+
+.logo a{
+text-decoration:none;
+color:#fff;
+}
+
+.logo span{
+color:var(--primary);
+}
+
+.sidebar-menu{
+list-style:none;
+}
+
+.sidebar-menu li{
+margin-bottom:10px;
+}
+
+.sidebar-menu a{
+display:flex;
+align-items:center;
+padding:14px 16px;
+border-radius:12px;
+text-decoration:none;
+color:#ddd;
+transition:.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active{
+background:var(--primary);
+color:#fff;
+}
+
+.logout-btn{
+background:#222;
+padding:14px;
+text-align:center;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+}
+.logout-btn a{
+display: flex;  
+align-items: center;
+text-decoration: none; 
+text-align: center;
+color: #f8f5f1; 
+gap: 8px;
+margin-left: 20px;}
+.logout-btn:hover{
+background:#c0392b;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+padding:25px;
+overflow-y:auto;
+}
+
+/* TOPBAR */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.search-box{
+width:380px;
+}
+
+.search-box input{
+width:100%;
+padding:14px 18px;
+border:none;
+border-radius:14px;
+outline:none;
+background:#fff;
+}
+
+.top-actions{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.dark-mode-btn,
+.rtl-btn{
+width:48px;
+height:48px;
+border-radius:50%;
+border:none;
+cursor:pointer;
+background:#fff;
+font-weight:600;
+}
+
+.notification{
+width:50px;
+height:50px;
+background:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+cursor:pointer;
+}
+
+.badge{
+position:absolute;
+top:8px;
+right:8px;
+width:10px;
+height:10px;
+background:red;
+border-radius:50%;
+}
+
+.profile{
+display:flex;
+align-items:center;
+gap:10px;
+background:#fff;
+padding:8px 15px;
+border-radius:50px;
+}
+
+.profile img{
+width:42px;
+height:42px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* WELCOME */
+
+.welcome{
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+padding:30px;
+border-radius:20px;
+color:#fff;
+margin-bottom:25px;
+}
+
+.welcome h1{
+font-size:32px;
+margin-bottom:8px;
+}
+.customer-stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-bottom:25px;
+}
+
+.customer-card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+transition:.3s;
+}
+
+.customer-card:hover{
+transform:translateY(-8px);
+}
+
+.customer-card h2{
+font-size:38px;
+color:var(--primary);
+margin-bottom:10px;
+}.vip-section{
+background:#fff;
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.vip-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:20px;
+}
+
+.vip-profile{
+text-align:center;
+padding:20px;
+background:#f8f5f1;
+border-radius:15px;
+}
+
+.vip-profile img{
+width:80px;
+height:80px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:12px;
+}.segments{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-bottom:25px;
+}
+
+.segment{
+padding:30px;
+border-radius:20px;
+color:#fff;
+}
+
+.bronze{
+background:#b87333;
+}
+
+.silver{
+background:#a8a9ad;
+}
+
+.gold{
+background:#d4af37;
+}
+
+.platinum{
+background:#444;
+}.activity-feed{
+background:#fff;
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.feed-item{
+padding:15px;
+border-left:4px solid var(--primary);
+margin-bottom:12px;
+background:#f8f5f1;
+border-radius:10px;
+}.journey{
+background:#fff;
+padding:25px;
+border-radius:20px;
+}
+
+.funnel{
+margin:15px auto;
+padding:18px;
+text-align:center;
+color:#fff;
+border-radius:10px;
+}
+
+.visitor{
+width:100%;
+background:#555;
+}
+
+.signup{
+width:80%;
+background:#777;
+}
+
+.buyer{
+width:60%;
+background:var(--secondary);
+}
+
+.vip{
+width:40%;
+background:var(--primary);
+}
+/* ==========================
+CUSTOMERS PAGE DARK MODE
+========================== */
+
+body.dark-mode .customer-card,
+body.dark-mode .vip-section,
+body.dark-mode .vip-profile,
+body.dark-mode .activity-feed,
+body.dark-mode .feed-item,
+body.dark-mode .journey,
+body.dark-mode .segment {
+  background: #000;
+  color: #fff;
+  border: 1px solid #222;
+}
+
+body.dark-mode .customer-card p,
+body.dark-mode .vip-profile p,
+body.dark-mode .segment p,
+body.dark-mode .feed-item p {
+  color: #fff;
+}
+
+body.dark-mode .customer-card h2,
+body.dark-mode .customer-card h3,
+body.dark-mode .customer-card h4,
+body.dark-mode .vip-profile h4,
+body.dark-mode .segment h2,
+body.dark-mode .segment h3,
+body.dark-mode .activity-feed h3,
+body.dark-mode .journey h3 {
+  color: #fff;
+}
+
+body.dark-mode .customer-card {
+  box-shadow: none;
+}body.dark-mode{
+background:#121212;
+color:#fff;
+}
+
+body.dark-mode .profile,
+body.dark-mode .notification,
+body.dark-mode .search-box input{
+background:#1f1f1f;
+color:#fff;
+}
+
+body.dark-mode .search-box input::placeholder{
+color:#aaa;
+}
+.menu-toggle {
+  display: none;
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+/* =====================================
+SAMSUNG GALAXY S8+ (360px - 480px)
+===================================== */
+@media screen and (max-width:480px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  .sidebar{
+    position:fixed;
+    left:-260px;
+    top:0;
+    width:260px;
+    height:100vh;
+    z-index:999;
+    transition:.4s;
+  }
+
+  .sidebar.active{
+    left:0;
+  }
+
+  .main{
+    width:100%;
+    padding:15px;
+    min-width:0;
+  }
+
+  .topbar{
+    flex-direction:column;
+    align-items:stretch;
+    gap:15px;
+  }
+
+  .search-box{
+    width:100%;
+  }
+
+  .top-actions{
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .profile{
+    width:100%;
+    justify-content:center;
+  }
+
+  .welcome{
+    padding:20px;
+  }
+
+  .welcome h1{
+    font-size:24px;
+  }
+
+  .customer-stats{
+    grid-template-columns:1fr;
+  }
+
+  .vip-grid{
+    grid-template-columns:1fr;
+  }
+
+  .segments{
+    grid-template-columns:1fr;
+  }
+
+  .customer-card,
+  .segment{
+    padding:20px;
+  }
+
+  .customer-card h2{
+    font-size:30px;
+  }
+
+  .vip-profile img{
+    width:70px;
+    height:70px;
+  }
+
+  .journey{
+    padding:20px;
+  }
+
+  .funnel{
+    font-size:14px;
+    padding:15px;
+  }
+
+  .logout-btn a{
+    margin-left:0;
+    justify-content:center;
+  }
+
+  .dark-mode-btn,
+  .rtl-btn,
+  .notification{
+    width:42px;
+    height:42px;
+  }
+
+  .logo{
+    font-size:26px;
+  }
+}
+
+/* =====================================
+IPAD MINI (481px - 768px)
+===================================== */
+@media screen and (min-width:481px) and (max-width:768px){
+
+  .sidebar{
+    width:220px;
+  }
+
+  .main{
+    padding:20px;
+  }
+
+  .search-box{
+    width:250px;
+  }
+
+  .customer-stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .vip-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .segments{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .profile span{
+    display:none;
+  }
+
+  .welcome h1{
+    font-size:28px;
+  }
+}
+
+/* =====================================
+IPAD PRO 11" (769px - 1024px)
+===================================== */
+@media screen and (min-width:769px) and (max-width:1024px){
+
+  .sidebar{
+    width:230px;
+  }
+
+  .search-box{
+    width:300px;
+  }
+
+  .customer-stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .vip-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .segments{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+/* =====================================
+IPAD PRO 12.9" (1025px - 1366px)
+===================================== */
+@media screen and (min-width:1025px) and (max-width:1366px){
+
+  .customer-stats{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .vip-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .segments{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .search-box{
+    width:340px;
+  }
+}

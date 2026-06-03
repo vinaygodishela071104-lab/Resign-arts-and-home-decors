@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resique Admin | Products</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div>
+
+<div class="logo">
+<a href="index.html"><span>Res</span>ique</a>
+</div>
+
+<ul class="sidebar-menu">
+
+<li>
+<a href="dashboard.html">Dashboard</a>
+</li>
+
+<li>
+<a href="orders.html" >Orders</a>
+</li>
+
+<li>
+<a href="products.html"class="active">Products</a>
+</li>
+
+<li>
+<a href="blogs.html">Blogs</a>
+</li>
+
+<li>
+<a href="customers.html">Customers</a>
+</li>
+
+<li>
+<a href="reviews.html">Reviews</a>
+</li>
+
+<li>
+<a href="settings.html">Settings</a>
+</li>
+
+</ul>
+
+</div>
+
+<div class="logout-btn">
+<a href="logout.html"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+  <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+</svg> Logout</a>
+</div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<div class="search-box">
+<input type="text" placeholder="Search Orders...">
+</div>
+
+<div class="top-actions">
+
+<button class="dark-mode-btn">
+🌙
+</button>
+
+<button class="rtl-btn">
+RTL
+</button>
+
+<div class="notification">
+🔔
+<div class="badge"></div>
+</div>
+<button class="menu-toggle">
+  <i class="fa-solid fa-bars"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg></i>
+</button>
+
+<div class="profile">
+<img src="images/r1.jpg" alt="">
+<div>
+<h5>Admin</h5>
+<small>Order Manager</small>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="welcome">
+  <h1>Products Management 🛍️</h1>
+  <p>
+    Manage inventory, stock levels, product categories and performance analytics.
+  </p>
+</div>
+<div class="stats">
+
+  <div class="stat-card">
+    <h4>Total Products</h4>
+    <h2>86</h2>
+    <span>+8 Added This Month</span>
+  </div>
+
+  <div class="stat-card">
+    <h4>In Stock</h4>
+    <h2>72</h2>
+    <span>Available Products</span>
+  </div>
+
+  <div class="stat-card">
+    <h4>Low Stock</h4>
+    <h2>8</h2>
+    <span>Needs Restocking</span>
+  </div>
+
+  <div class="stat-card">
+    <h4>Best Sellers</h4>
+    <h2>12</h2>
+    <span>Top Performing</span>
+  </div>
+
+</div>
+<div class="orders-table">
+
+  <h3>Product Inventory</h3>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Category</th>
+        <th>Stock</th>
+        <th>Price</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>Luxury Resin Clock</td>
+        <td>Clocks</td>
+        <td>42</td>
+        <td>₹3,499</td>
+        <td>
+          <span class="status completed">
+            In Stock
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Ocean Wall Art</td>
+        <td>Wall Decor</td>
+        <td>18</td>
+        <td>₹4,999</td>
+        <td>
+          <span class="status processing">
+            Low Stock
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Custom Resin Tray</td>
+        <td>Kitchen Decor</td>
+        <td>5</td>
+        <td>₹2,199</td>
+        <td>
+          <span class="status cancelled">
+            Critical
+          </span>
+        </td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+<div class="section-grid">
+
+  <div class="shipping">
+
+    <h3>Best Selling Products 🏆</h3>
+
+    <div class="ship-item">
+      <span>Luxury Resin Clock</span>
+      <strong>152 Sales</strong>
+    </div>
+
+    <div class="ship-item">
+      <span>Ocean Wall Art</span>
+      <strong>127 Sales</strong>
+    </div>
+
+    <div class="ship-item">
+      <span>Serving Tray</span>
+      <strong>113 Sales</strong>
+    </div>
+
+    <div class="ship-item">
+      <span>Coaster Set</span>
+      <strong>95 Sales</strong>
+    </div>
+
+  </div>
+
+  <div class="analytics">
+
+    <h3>Category Performance</h3>
+
+    <div class="chart">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+  </div>
+
+</div>
+<div class="shipping" style="margin-top:25px;">
+
+  <h3>Low Stock Alerts ⚠️</h3>
+
+  <div class="ship-item">
+    <span>Custom Resin Tray</span>
+    <strong>5 Units Left</strong>
+  </div>
+
+  <div class="ship-item">
+    <span>Ocean Wall Art</span>
+    <strong>18 Units Left</strong>
+  </div>
+
+  <div class="ship-item">
+    <span>Luxury Candle Holder</span>
+    <strong>7 Units Left</strong>
+  </div>
+
+  <div class="ship-item">
+    <span>Premium Resin Vase</span>
+    <strong>3 Units Left</strong>
+  </div>
+
+</div>
+
+
+<script>
+
+const darkModeBtn = document.querySelector(".dark-mode-btn");
+
+darkModeBtn.addEventListener("click", () => {
+
+  document.body.classList.toggle("dark-mode");
+
+  if(document.body.classList.contains("dark-mode")){
+    darkModeBtn.textContent = "☀️";
+  }else{
+    darkModeBtn.textContent = "🌙";
+  }
+
+});
+
+const rtlBtn = document.querySelector(".rtl-btn");
+
+rtlBtn.addEventListener("click", () => {
+
+  if(document.documentElement.dir === "rtl"){
+
+    document.documentElement.dir = "ltr";
+    rtlBtn.textContent = "RTL";
+
+  }else{
+
+    document.documentElement.dir = "rtl";
+    rtlBtn.textContent = "LTR";
+
+  }
+
+});
+const menuBtn = document.querySelector(".menu-toggle");
+const sidebar = document.querySelector(".sidebar");
+
+menuBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+</script>
+
+</body>
+</html>

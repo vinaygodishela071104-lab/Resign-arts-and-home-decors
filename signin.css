@@ -67,7 +67,7 @@ body {
   width: 100%;
   max-width: 700px;
 
-  background: rgba(15, 15, 15, 0.45);
+  background: rgba(0, 0, 0, 0.15);
 
   backdrop-filter: blur(16px);
 
@@ -374,41 +374,114 @@ body.dark-mode .social-btn {
 body.dark-mode .divider span {
   background: #141414;
 }
+/* =====================================
+SAMSUNG GALAXY S8+ (360px - 480px)
+===================================== */
+@media screen and (max-width:480px){
 
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
+  body{
+    height:auto;
+    min-height:100vh;
+    overflow-y:auto;
+    padding:20px 15px;
   }
 
-  .signup-card {
-    padding: 22px 18px;
-
-    border-radius: 22px;
+  .signup-card{
+    padding:20px;
+    border-radius:20px;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
-
-    gap: 0;
+  .logo{
+    font-size:26px;
+    margin-bottom:20px;
   }
 
-  .social-login {
-    grid-template-columns: 1fr;
+  .logo h1{
+    font-size:32px;
   }
 
-  .logo h1 {
-    font-size: 32px;
+  .logo p{
+    font-size:12px;
   }
 
-  .top-actions {
-    top: 14px;
-    right: 14px;
+  .form-row{
+    grid-template-columns:1fr;
+    gap:0;
   }
 
-  .top-actions button {
-    width: 38px;
-    height: 38px;
+  .social-login{
+    grid-template-columns:1fr;
+  }
 
-    font-size: 12px;
+  .top-actions{
+    top:12px;
+    right:12px;
+  }
+
+  .top-actions button{
+    width:38px;
+    height:38px;
+    font-size:13px;
+  }
+
+  .signup-btn,
+  .social-btn{
+    height:44px;
+  }
+
+  .terms{
+    align-items:flex-start;
+  }
+
+  .terms label{
+    font-size:10px;
+  }
+}
+
+/* =====================================
+IPAD MINI (481px - 768px)
+===================================== */
+@media screen and (min-width:481px) and (max-width:768px){
+
+  body{
+    overflow-y:auto;
+    padding:25px;
+  }
+
+  .signup-card{
+    max-width:650px;
+    padding:25px;
+  }
+
+  .logo h1{
+    font-size:36px;
+  }
+
+  .form-row{
+    gap:12px;
+  }
+}
+
+/* =====================================
+IPAD PRO 11" (769px - 1024px)
+===================================== */
+@media screen and (min-width:769px) and (max-width:1024px){
+
+  .signup-card{
+    max-width:720px;
+  }
+
+  .logo h1{
+    font-size:38px;
+  }
+}
+
+/* =====================================
+IPAD PRO 12.9" (1025px - 1366px)
+===================================== */
+@media screen and (min-width:1025px) and (max-width:1366px){
+
+  .signup-card{
+    max-width:760px;
   }
 }
